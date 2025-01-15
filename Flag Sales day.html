@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    table {
+      border-spacing: 0;
+      width: 100%;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+    .header {
+      background-color: #002868;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    .header img {
+      width: 100px;
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .sale-highlight {
+      color: #d62e2e;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .cta-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 15px 25px;
+      background-color: #d62e2e;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .cta-button:hover {
+      background-color: #ba2525;
+    }
+    .footer {
+      background-color: #f9f9f9;
+      color: #555;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+    }
+    .countdown {
+      font-size: 18px;
+      color: #002868;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    @media screen and (max-width: 600px) {
+      .content {
+        padding: 15px;
+      }
+      .cta-button {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="email-container">
+    <!-- Header Section -->
+    <tr>
+      <td class="header">
+        <img src="https://via.placeholder.com/100x100?text=flag" alt="Flag Day Sale">
+        <h1>Flag Day Sales Are Here!</h1>
+      </td>
+    </tr>
+
+    <!-- Content Section -->
+    <tr>
+      <td class="content">
+        <p class="sale-highlight">Up to 50% OFF on All Products!</p>
+        <p>Celebrate Flag Day with incredible discounts on our entire collection. Don’t miss out!</p>
+        <div id="countdown" class="countdown">Hurry! Sale ends in: <span id="timer"></span></div>
+        <a href="[ShopNowLink]" class="cta-button">Shop Now</a>
+        <a href="[FeaturedItemsLink]" class="cta-button" style="background-color: #002868;">View Featured Items</a>
+      </td>
+    </tr>
+
+    <!-- Footer Section -->
+    <tr>
+      <td class="footer">
+        <p>&copy; 2025 [SaleSphere]. All rights reserved.</p>
+        <p>[Lahore], [Pakistan]</p>
+        <p>
+          <a href="[PrivacyPolicyLink]" style="color: #002868;">Privacy Policy</a> |
+          <a href="[TermsLink]" style="color: #002868;">Terms of Service</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    // Countdown Timer Functionality
+    const countdownDate = new Date("2025-06-14T23:59:59").getTime();
+    const timerElement = document.getElementById("timer");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+        timerElement.textContent = "Sale Ended";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000)) / 1000);
+
+      timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
