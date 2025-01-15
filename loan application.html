@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    table {
+      border-spacing: 0;
+    }
+    .email-container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .header {
+      background: #004d99;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #004d99;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background: #003366;
+    }
+    .footer {
+      background: #f4f4f4;
+      color: #555555;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+    }
+    @media screen and (max-width: 600px) {
+      .content {
+        padding: 10px;
+      }
+      .button {
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table width="100%" class="email-container">
+    <tr>
+      <td>
+        <!-- Header -->
+        <table width="100%">
+          <tr>
+            <td class="header">
+              <h1>Loan Application Received</h1>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Content -->
+        <table width="100%">
+          <tr>
+            <td class="content">
+              <p>Dear [Applicant's Name],</p>
+              <p>Thank you for submitting your loan application with [Your Company Name]. We’re currently reviewing your application and will get back to you within the next 2-3 business days.</p>
+              <p>Here’s a summary of your application:</p>
+              <ul>
+                <li><strong>Loan Amount:</strong> $[Loan Amount]</li>
+                <li><strong>Loan Type:</strong> [Loan Type]</li>
+                <li><strong>Application Date:</strong> [Date]</li>
+              </ul>
+              <p>If you have any questions or need assistance, please don’t hesitate to contact our support team.</p>
+              <a href="mailto:support@yourcompany.com" class="button">Contact Support</a>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Footer -->
+        <table width="100%">
+          <tr>
+            <td class="footer">
+              <p>&copy; 2025 [Your Company Name]. All rights reserved.</p>
+              <p>123 Business Lane, City, State, ZIP</p>
+              <p>
+                <a href="#" style="color: #004d99; text-decoration: none;">Privacy Policy</a> | 
+                <a href="#" style="color: #004d99; text-decoration: none;">Terms of Service</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
